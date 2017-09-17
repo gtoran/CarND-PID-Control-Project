@@ -35,6 +35,11 @@ int main()
   PID pid, pid_throttle;
   // TODO: Initialize the pid variable.
 
+  // Consequences of incorrect values:
+  // P - abrupt swerves
+  // I - excessive compensation
+  // D - burst of corrections at any given moment, results in constant compensation and unsmooth driving
+
   //pid.Init(0.4, 0.4, 1); // Just to start and gauge.
   //pid.Init(0.2, 0.001, 2); // This seems to work up until the bridge.
   //pid.Init(0.2, 0.002, 2); // Worse than before, let's try tweaking i and d.
